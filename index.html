@@ -469,6 +469,12 @@
     function openWindow(name) {
       const win = document.getElementById('window-' + name);
       const dockItem = document.getElementById('dock-' + name);
+      if (!win) return;
+      if (window.innerWidth <= 768) {
+        win.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (dockItem) dockItem.classList.add('open');
+        return;
+      }
       win.classList.remove('minimized');
       win.classList.add('visible');
       bringToFront(win);
@@ -535,7 +541,8 @@
       win.addEventListener('mousedown', () => bringToFront(win));
     });
 
-    // ── interact.js: Drag + Resize ──
+    // ── interact.js: Drag + Resize ── (desktop only)
+    if (window.innerWidth > 768) {
     interact('.window')
       .draggable({
         allowFrom: '.window-titlebar, .sidebar-traffic-lights, .finder-main-title',
@@ -558,6 +565,7 @@
           }
         }
       });
+    }
 
     // ── Selectable Project Items ──
     document.querySelectorAll('.project-item').forEach(item => {
@@ -573,7 +581,8 @@
       }
     });
 
-    // ── Draggable Project Items ──
+    // ── Draggable Project Items ── (desktop only)
+    if (window.innerWidth > 768) {
     const widgetZone = { right: 400, bottom: 540 };
     interact('.project-item')
       .draggable({
@@ -615,6 +624,7 @@
           }
         }
       });
+    }
 
     // ── Dock Bounce ──
     document.querySelectorAll('.dock-item').forEach(item => {
@@ -750,10 +760,12 @@
 
     // ── Startup Cascade ──
     setTimeout(() => {
-      const win = document.getElementById('window-resume');
-      const desktop = document.getElementById('desktop');
-      win.style.left = Math.max(0, (desktop.offsetWidth - 780) / 2) + 'px';
-      win.style.top = Math.max(20, (desktop.offsetHeight - 600) / 2) + 'px';
+      if (window.innerWidth > 768) {
+        const win = document.getElementById('window-resume');
+        const desktop = document.getElementById('desktop');
+        win.style.left = Math.max(0, (desktop.offsetWidth - 780) / 2) + 'px';
+        win.style.top = Math.max(20, (desktop.offsetHeight - 600) / 2) + 'px';
+      }
       openWindow('resume');
     }, 100);
   </script>
