@@ -20,20 +20,6 @@
 <!-- Desktop -->
   <div class="desktop" id="desktop">
 
-<!-- Date Widget -->
-    <div class="date-widget" id="date-widget">
-      <div class="date-widget-top">
-        <span class="date-widget-day" id="widget-day"></span>
-        <span class="date-widget-month" id="widget-month"></span>
-      </div>
-      <div class="date-widget-num" id="widget-num"></div>
-    </div>
-
-<!-- Photo Widget Small -->
-    <div class="photo-widget-sm">
-      <img src="https://picsum.photos/seed/widget2/400/400" alt="Photo Widget">
-    </div>
-
 <!-- Flip Clock -->
     <div class="flip-clock" id="flip-clock">
       <div class="flip-clock-date">
@@ -658,18 +644,7 @@
     updateFlipClock();
     setInterval(updateFlipClock, 1000);
 
-    // ── Date Widget ──
-    function updateDateWidget() {
-      var now = new Date();
-      var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      document.getElementById('widget-day').textContent = days[now.getDay()];
-      document.getElementById('widget-month').textContent = months[now.getMonth()];
-      document.getElementById('widget-num').textContent = now.getDate();
-    }
-    updateDateWidget();
-
-// ── Copy Buttons ──
+    // ── Copy Buttons ──
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();

@@ -1131,98 +1131,6 @@ body {
   transform: translateY(0);
 }
 
-/* ── Date Widget ── */
-.date-widget {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 170px;
-  height: 170px;
-  background: rgba(245, 245, 245, 0.92);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1), 0 0 0 0.5px rgba(0, 0, 0, 0.06);
-  pointer-events: none;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
-}
-
-.date-widget-top {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-}
-
-.date-widget-day {
-  font-size: 25px;
-  font-weight: 600;
-  color: #e03e36;
-  letter-spacing: 0.3px;
-}
-
-.date-widget-month {
-  font-size: 25px;
-  font-weight: 600;
-  color: #999;
-  letter-spacing: 0.3px;
-}
-
-.date-widget-num {
-  font-size: 92px;
-  font-weight: 700;
-  color: #1a1a1a;
-  line-height: 0.85;
-  letter-spacing: -2px;
-  margin-top: 2px;
-}
-
-/* ── Weather Widget ── */
-.photo-widget-sm {
-  position: absolute;
-  top: 20px;
-  left: 200px;
-  width: 170px;
-  height: 170px;
-  border-radius: 30px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1), 0 0 0 0.5px rgba(0, 0, 0, 0.06);
-  pointer-events: none;
-  z-index: 10;
-}
-.photo-widget-sm img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ── Photo Widget ── */
-.photo-widget {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 350px;
-  height: 160px;
-  border-radius: 26px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1), 0 0 0 0.5px rgba(0, 0, 0, 0.06);
-  pointer-events: none;
-  z-index: 10;
-}
-.photo-widget img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* ── Flip Clock ── */
 .flip-clock {
   position: absolute;
@@ -1603,8 +1511,6 @@ body {
   }
 
   /* Hide desktop-only decorative elements */
-  .date-widget,
-  .photo-widget-sm,
   .flip-clock,
   .project-item {
     display: none !important;
