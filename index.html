@@ -57,14 +57,7 @@
           <div class="finder-tab" data-tab="experience"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1" fill="none"/><path d="M5 4V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1" fill="none"/></svg>Experience</div>
           <div class="finder-tab" data-tab="contact"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="currentColor" stroke-width="1" fill="none"/><path d="M1.5 5l6.5 4 6.5-4" stroke="currentColor" stroke-width="1" fill="none"/></svg>Contact</div>
           <div class="finder-tab" data-tab="faq"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/><text x="8" y="11.5" text-anchor="middle" font-size="10" font-weight="600" fill="currentColor">?</text></svg>FAQ</div>
-          <div class="finder-sidebar-label">Favorites</div>
           <div class="finder-tab" data-tab="projects"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 4.5V12a1.5 1.5 0 001.5 1.5h10a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H8L6.5 3H3A1.5 1.5 0 001.5 4.5z" stroke="currentColor" stroke-width="1" fill="none"/></svg>Projects</div>
-          <div class="finder-sidebar-label tags-toggle" id="tags-toggle">Tags<svg class="tags-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.5l3 3 3-3"/></svg></div>
-          <div class="tags-list collapsed" id="tags-list">
-            <div class="finder-tag-item" data-tag="fullstack"><span class="finder-tag-dot" style="background: #86d993;"></span>Full-Stack</div>
-            <div class="finder-tag-item" data-tag="ai"><span class="finder-tag-dot" style="background: #c9a0dc;"></span>AI</div>
-            <div class="finder-tag-item" data-tag="ui"><span class="finder-tag-dot" style="background: #f5c882;"></span>UI/UX</div>
-          </div>
           <a href="resume.pdf" download class="finder-download-btn"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3-3m3 3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Download CV</a>
         </div>
         <div class="finder-main">
@@ -153,14 +146,6 @@
               <div class="faq-item">
                 <div class="faq-q">Are you open to in-person, hybrid, or remote work?</div>
                 <div class="faq-a">Yes, I'm comfortable with all work arrangements — in-person, hybrid, or fully remote.</div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Why this website?</div>
-                <div class="faq-a">LinkedIn felt too linear, and the most interesting things happen between the lines.</div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">How long did this take you?</div>
-                <div class="faq-a">Longer than I estimated. Shorter than it felt.</div>
               </div>
             </div>
           </div>
@@ -432,11 +417,6 @@
         <div class="dock-icon"><svg width="48" height="48" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="26" fill="#0A66C2"/><path d="M35.5 51.5h10v32h-10v-32zm5-16a5.8 5.8 0 110 11.6 5.8 5.8 0 010-11.6zm14.5 16h9.6v4.4h.14c1.34-2.54 4.6-5.2 9.5-5.2 10.16 0 12.04 6.7 12.04 15.4v17.4h-10v-15.4c0-3.68-.06-8.4-5.12-8.4-5.12 0-5.9 4-5.9 8.14v15.66H55v-32z" fill="white"/></svg></div>
       </div>
       <div class="dock-separator"></div>
-      <div class="dock-item" id="dock-projects" onclick="openWindow('projects')">
-        <span class="dock-tooltip">Projects</span>
-        <div class="dock-icon"><img src="icons/folder.png" alt="Projects"></div>
-        <span class="dock-dot"></span>
-      </div>
       <div class="dock-separator"></div>
       <div class="dock-item" id="dock-trash" onclick="openWindow('trash')">
         <span class="dock-tooltip">Trash</span>
@@ -670,45 +650,11 @@
         const mainTitle = document.getElementById('finder-main-title');
         if (mainTitle) mainTitle.textContent = tab.childNodes[tab.childNodes.length - 1].textContent.trim();
         // Reset tag filter when switching tabs
-        document.querySelectorAll('.finder-tag-item').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('#panel-projects .finder-file').forEach(f => f.classList.remove('hidden'));
       });
     });
 
-    // ── Sidebar Tag Filtering ──
-    document.querySelectorAll('.finder-tag-item').forEach(tag => {
-      tag.addEventListener('click', () => {
-        const isActive = tag.classList.contains('active');
-        document.querySelectorAll('.finder-tag-item').forEach(t => t.classList.remove('active'));
-
-        // Switch to projects panel
-        const win = tag.closest('.window');
-        win.querySelectorAll('.finder-tab').forEach(t => t.classList.remove('active'));
-        win.querySelectorAll('.finder-panel').forEach(p => p.classList.remove('active'));
-        win.querySelector('.finder-tab[data-tab="projects"]').classList.add('active');
-        win.querySelector('#panel-projects').classList.add('active');
-        document.getElementById('finder-main-title').textContent = 'Projects';
-
-        const files = document.querySelectorAll('#panel-projects .finder-file');
-        if (isActive) {
-          // Deselect — show all
-          files.forEach(f => f.classList.remove('hidden'));
-        } else {
-          tag.classList.add('active');
-          const selectedTag = tag.dataset.tag;
-          files.forEach(f => {
-            const fileTags = f.dataset.tags.split(' ');
-            f.classList.toggle('hidden', !fileTags.includes(selectedTag));
-          });
-        }
-      });
-    });
-
-    // ── Tags Dropdown ──
-    document.getElementById('tags-toggle').addEventListener('click', () => {
-      document.getElementById('tags-toggle').classList.toggle('open');
-      document.getElementById('tags-list').classList.toggle('collapsed');
-    });
+    // ── Sidebar Tag Filtering / Tags Dropdown removed ──
 
     // ── View Toggle ──
     document.querySelectorAll('.view-btn').forEach(btn => {
