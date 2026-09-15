@@ -1,9 +1,9 @@
 :root {
   --bg: #faf9f7;
   --ink: #1d1d1f;
-  --muted: #6e6e73;
+  --muted: #5c5c61;
   --accent: #007aff;
-  --slot: #8e8e93;
+  --slot: #5c5c61;
   --page: 34rem;
 }
 
@@ -151,6 +151,7 @@ h1 {
 .empty-slot {
   margin: 0;
   color: var(--slot);
+  font-style: italic;
 }
 
 #experience {
