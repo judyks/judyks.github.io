@@ -401,19 +401,19 @@ h1 {
   body.page-enter .hero,
   body.page-enter .section,
   body.page-enter .project-page {
-    animation: rise 0.65s ease both;
+    animation: rise 0.6s ease;
   }
 
   body.page-enter #work {
-    animation-delay: 0.08s;
+    animation-delay: 0.06s;
   }
 
   body.page-enter #about {
-    animation-delay: 0.14s;
+    animation-delay: 0.12s;
   }
 
   body.page-enter #contact {
-    animation-delay: 0.2s;
+    animation-delay: 0.18s;
   }
 
   body.page-leave {
@@ -453,12 +453,10 @@ h1 {
 
 @keyframes rise {
   from {
-    opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
 
   to {
-    opacity: 1;
     transform: none;
   }
 }

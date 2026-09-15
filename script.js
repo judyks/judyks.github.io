@@ -3,7 +3,9 @@
   var status = document.getElementById("copy-status");
 
   if (!reduce.matches) {
-    document.body.classList.add("page-enter");
+    window.requestAnimationFrame(function () {
+      document.body.classList.add("page-enter");
+    });
   }
 
   document.querySelectorAll(".copy-btn").forEach(function (btn) {
