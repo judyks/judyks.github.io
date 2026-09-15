@@ -11,82 +11,123 @@
   <title>Judy Kang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="site-logo" href="#home">Judy Kang</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
 
-  <header class="site-header">
-    <a class="site-logo" href="#home">Judy Kang</a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="#home">Home</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+    <main id="main">
+      <section id="home" class="section hero" aria-labelledby="hero-name">
+        <p class="eyebrow">Seattle, WA</p>
+        <h1 id="hero-name">Judy Kang</h1>
+        <p class="lede">Software developer passionate about building beautiful, functional web experiences.</p>
+        <ul class="chips" aria-label="Focus and education">
+          <li>Full-Stack Development</li>
+          <li>University of Washington</li>
+          <li>B.S. in Computer Science</li>
+          <li>Graduated on December 2025</li>
+        </ul>
+        <p class="bio-line">JavaScript, Python, Java. React, Node.js, Express. Git, Docker, AWS.</p>
+      </section>
 
-  <main id="main">
-    <section id="home" class="section" aria-labelledby="hero-name">
-      <h1 id="hero-name">Judy Kang</h1>
-      <p class="lede">Software developer passionate about building beautiful, functional web experiences.</p>
-      <p class="bio-line">Seattle, WA · Full-Stack Development</p>
-      <p class="bio-line">University of Washington, B.S. in Computer Science. Graduated on December 2025.</p>
-      <p class="bio-line">JavaScript, Python, Java. React, Node.js, Express. Git, Docker, AWS.</p>
-    </section>
+      <section id="work" class="section" aria-labelledby="work-heading">
+        <h2 id="work-heading">Work</h2>
+        <ul class="project-list">
+          <li>
+            <a class="project-row" href="projects/redesign.html">
+              <img src="images/placeholder-redesign.svg" alt="Placeholder for Redesign" width="640" height="400">
+              <span>
+                <strong>Redesign</strong>
+                <em class="empty-slot">Write-up to be added.</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="project-row" href="projects/weather-dashboard.html">
+              <img src="images/placeholder-weather.svg" alt="Placeholder for Weather Dashboard" width="640" height="400">
+              <span>
+                <strong>Weather Dashboard</strong>
+                <em class="empty-slot">Write-up to be added.</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="project-row" href="projects/social-app.html">
+              <img src="images/placeholder-social.svg" alt="Placeholder for Social App" width="640" height="400">
+              <span>
+                <strong>Social App</strong>
+                <em class="empty-slot">Write-up to be added.</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="project-row" href="projects/portfolio-v1.html">
+              <img src="images/placeholder-portfolio.svg" alt="Placeholder for Portfolio v1" width="640" height="400">
+              <span>
+                <strong>Portfolio v1</strong>
+                <em class="empty-slot">Write-up to be added.</em>
+              </span>
+            </a>
+          </li>
+        </ul>
 
-    <section id="work" class="section" aria-labelledby="work-heading">
-      <h2 id="work-heading">Work</h2>
-      <ul class="project-list">
-        <li><a href="projects/redesign.html">Redesign</a></li>
-        <li><a href="projects/weather-dashboard.html">Weather Dashboard</a></li>
-        <li><a href="projects/social-app.html">Social App</a></li>
-        <li><a href="projects/portfolio-v1.html">Portfolio v1</a></li>
-      </ul>
-      <p class="empty-slot">Project write-ups to be added.</p>
-
-      <h2 id="experience">Experience</h2>
-      <p class="empty-slot">Roles, employers, and dates omitted until they are confirmed.</p>
-    </section>
-
-    <section id="about" class="section" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
-      <dl class="faq">
-        <div>
-          <dt>Are you open to relocation?</dt>
-          <dd>Yes, I'm happy to relocate for the right opportunity.</dd>
+        <div id="experience" class="panel panel-amber">
+          <h2>Experience</h2>
+          <p class="empty-slot">Roles, employers, and dates omitted until they are confirmed.</p>
         </div>
-        <div>
-          <dt>Do you require visa sponsorship?</dt>
-          <dd>No, I do not require sponsorship now or in the future.</dd>
-        </div>
-        <div>
-          <dt>Are you open to in-person, hybrid, or remote work?</dt>
-          <dd>Yes, I'm comfortable with all work arrangements — in-person, hybrid, or fully remote.</dd>
-        </div>
-        <div>
-          <dt>Why this website?</dt>
-          <dd>LinkedIn felt too linear, and the most interesting things happen between the lines.</dd>
-        </div>
-        <div>
-          <dt>How long did this take you?</dt>
-          <dd>Longer than I estimated. Shorter than it felt.</dd>
-        </div>
-      </dl>
-    </section>
+      </section>
 
-    <section id="contact" class="section" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p>
-        <a href="mailto:judykangsh@gmail.com">judykangsh@gmail.com</a>
-        <button type="button" class="copy-btn" data-copy="judykangsh@gmail.com">Copy</button>
-      </p>
-      <p><a href="https://github.com/judyks">github.com/judyks</a></p>
-      <p class="empty-slot">LinkedIn URL to be added.</p>
-      <p class="empty-slot">resume.pdf to be added.</p>
-      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
-    </section>
-  </main>
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <dl class="faq">
+          <div>
+            <dt>Are you open to relocation?</dt>
+            <dd>Yes, I'm happy to relocate for the right opportunity.</dd>
+          </div>
+          <div>
+            <dt>Do you require visa sponsorship?</dt>
+            <dd>No, I do not require sponsorship now or in the future.</dd>
+          </div>
+          <div>
+            <dt>Are you open to in-person, hybrid, or remote work?</dt>
+            <dd>Yes, I'm comfortable with all work arrangements — in-person, hybrid, or fully remote.</dd>
+          </div>
+          <div>
+            <dt>Why this website?</dt>
+            <dd>LinkedIn felt too linear, and the most interesting things happen between the lines.</dd>
+          </div>
+          <div>
+            <dt>How long did this take you?</dt>
+            <dd>Longer than I estimated. Shorter than it felt.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="panel panel-blue">
+          <h2 id="contact-heading">Contact</h2>
+          <p>
+            <a href="mailto:judykangsh@gmail.com">judykangsh@gmail.com</a>
+            <button type="button" class="copy-btn" data-copy="judykangsh@gmail.com">Copy</button>
+          </p>
+          <p><a href="https://github.com/judyks">github.com/judyks</a></p>
+          <p class="empty-slot">LinkedIn URL to be added.</p>
+          <p class="empty-slot">resume.pdf to be added.</p>
+          <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
