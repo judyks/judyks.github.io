@@ -100,8 +100,7 @@ a:hover {
   grid-template-areas:
     "intro work"
     "experience work"
-    "about about"
-    "contact contact";
+    "contact work";
   gap: 1.75rem 2.5rem;
   align-items: start;
 }
@@ -109,7 +108,6 @@ a:hover {
 .dash-intro { grid-area: intro; }
 .dash-work { grid-area: work; }
 .dash-slot { grid-area: experience; }
-.dash-about { grid-area: about; }
 .dash-contact { grid-area: contact; }
 
 h1,
@@ -212,25 +210,32 @@ h1 {
   padding-top: 0.2rem;
 }
 
-.faq {
+.contact-list {
+  list-style: none;
   margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem 2rem;
+  gap: 0.55rem;
 }
 
-.faq dt {
-  margin: 0 0 0.25rem;
-  font-weight: 500;
+.contact-list li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, max-content) auto;
+  align-items: center;
+  gap: 0.65rem;
 }
 
-.faq dd {
-  margin: 0;
+.contact-icon {
+  display: flex;
   color: var(--muted);
 }
 
-.dash-contact p {
-  margin: 0 0 0.35rem;
+.contact-list a {
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
 }
 
 .copy-btn {
@@ -309,13 +314,11 @@ h1 {
       "intro"
       "work"
       "experience"
-      "about"
       "contact";
     gap: 1.75rem;
   }
 
   .project-grid,
-  .faq,
   .facts > div {
     grid-template-columns: 1fr;
   }
