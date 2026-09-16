@@ -239,7 +239,7 @@ h1 {
 }
 
 .copy-btn {
-  margin-left: 0.5rem;
+  justify-self: start;
   padding: 0;
   border: 0;
   background: none;
@@ -247,10 +247,16 @@ h1 {
   font: inherit;
   font-size: 0.82rem;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.16s ease, color 0.16s ease;
 }
 
-.copy-btn:hover,
+.contact-email:hover .copy-btn,
+.contact-email:focus-within .copy-btn,
+.copy-btn:focus,
+.copy-btn:focus-visible,
 .copy-btn.copied {
+  opacity: 1;
   color: var(--ink);
 }
 
