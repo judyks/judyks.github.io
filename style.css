@@ -220,7 +220,7 @@ h1 {
 
 .contact-list li {
   display: grid;
-  grid-template-columns: 1.25rem minmax(0, max-content) auto;
+  grid-template-columns: 1.25rem minmax(0, max-content);
   align-items: center;
   gap: 0.65rem;
 }
@@ -236,35 +236,6 @@ h1 {
 
 .contact-list a:hover {
   text-decoration: underline;
-}
-
-.copy-btn {
-  justify-self: start;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.82rem;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.16s ease, color 0.16s ease;
-}
-
-.contact-email:hover .copy-btn,
-.contact-email:focus-within .copy-btn,
-.copy-btn:focus,
-.copy-btn:focus-visible,
-.copy-btn.copied {
-  opacity: 1;
-  color: var(--ink);
-}
-
-.copy-status {
-  min-height: 1.25em;
-  margin-top: 0.45rem;
-  color: var(--muted);
-  font-size: 0.85rem;
 }
 
 .project-page {
