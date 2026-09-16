@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Placeholder">
-  <rect width="640" height="400" fill="#6d28d9"/>
-  <circle cx="210" cy="210" r="140" fill="#c4b5fd"/>
-  <circle cx="420" cy="150" r="88" fill="#f472b6"/>
-  <rect x="380" y="230" width="200" height="90" rx="45" fill="#fde68a"/>
-  <text x="28" y="372" fill="#f5f3ff" font-family="Inter, system-ui, sans-serif" font-size="18">Placeholder</text>
+  <rect width="640" height="400" fill="#f4f4f4"/>
+  <circle cx="210" cy="210" r="140" fill="#d6d6d6"/>
+  <circle cx="420" cy="150" r="88" fill="#bfbfbf"/>
+  <rect x="380" y="230" width="200" height="90" rx="45" fill="#e4e4e4"/>
+  <text x="28" y="372" fill="#6b6b6b" font-family="Inter, system-ui, sans-serif" font-size="18">Placeholder</text>
 </svg>
