@@ -186,6 +186,27 @@ h1 {
   padding-top: 0.2rem;
 }
 
+.experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.experience-list li {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.experience-role {
+  font-weight: 500;
+}
+
+.experience-meta {
+  color: var(--muted);
+}
+
 .contact-list {
   list-style: none;
   margin: 0;

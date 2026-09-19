@@ -22,6 +22,7 @@
       }
 
       if (url.origin !== window.location.origin) return;
+      if (url.pathname.endsWith(".pdf")) return;
       if (url.pathname === window.location.pathname && url.hash) return;
       if (url.href === window.location.href) return;
 
