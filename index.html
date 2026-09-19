@@ -3,772 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Judy Kang - Software Developer Portfolio">
+  <meta name="description" content="Judy Kang — Software developer passionate about building beautiful, functional web experiences.">
   <meta property="og:title" content="Judy Kang">
-  <meta property="og:description" content="Software Developer Portfolio">
+  <meta property="og:description" content="Software developer passionate about building beautiful, functional web experiences.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128187;</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.82em' font-size='88' font-family='system-ui,sans-serif'>J</text></svg>">
   <title>Judy Kang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Desktop -->
-  <div class="desktop" id="desktop">
+  <header class="site-header">
+    <a class="site-logo" href="#home">Judy Kang</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- Date Widget -->
-    <div class="date-widget" id="date-widget">
-      <div class="date-widget-top">
-        <span class="date-widget-day" id="widget-day"></span>
-        <span class="date-widget-month" id="widget-month"></span>
-      </div>
-      <div class="date-widget-num" id="widget-num"></div>
-    </div>
+  <main id="main" class="dash">
+    <section id="home" class="dash-intro" aria-labelledby="hero-name">
+      <h1 id="hero-name">Judy Kang</h1>
+      <p class="lede">Software developer passionate about building beautiful, functional web experiences.</p>
+    </section>
 
-<!-- Photo Widget Small -->
-    <div class="photo-widget-sm">
-      <img src="https://picsum.photos/seed/widget2/400/400" alt="Photo Widget">
-    </div>
-
-<!-- Flip Clock -->
-    <div class="flip-clock" id="flip-clock">
-      <div class="flip-clock-date">
-        <span id="flip-date"></span>
-        <span id="flip-day"></span>
-      </div>
-      <div class="flip-clock-digits">
-        <div class="flip-group">
-          <div class="flip-label" id="flip-ampm">PM</div>
-          <div class="flip-card"><span id="flip-h1">0</span></div>
-          <div class="flip-card"><span id="flip-h2">0</span></div>
-        </div>
-        <div class="flip-group">
-          <div class="flip-card"><span id="flip-m1">0</span></div>
-          <div class="flip-card"><span id="flip-m2">0</span></div>
-        </div>
-        <div class="flip-group">
-          <div class="flip-card"><span id="flip-s1">0</span></div>
-          <div class="flip-card"><span id="flip-s2">0</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Finder Window -->
-    <div class="window finder-window" id="window-resume" style="width: 780px;">
-      <div class="finder-content">
-        <div class="finder-sidebar">
-          <div class="sidebar-traffic-lights">
-            <div class="traffic-light close" onclick="closeWindow('resume')"></div>
-            <div class="traffic-light minimize" onclick="minimizeWindow(this.closest('.window').id.replace('window-',''))"></div>
-            <div class="traffic-light maximize" onclick="maximizeWindow('resume')"></div>
-          </div>
-          <div class="finder-sidebar-label">Resume</div>
-          <div class="finder-tab active" data-tab="about"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1"/><circle cx="8" cy="6.5" r="2.5" stroke="currentColor" stroke-width="0.9"/><path d="M3.5 14c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"/></svg>About Me</div>
-          <div class="finder-tab" data-tab="experience"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1" fill="none"/><path d="M5 4V3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1" fill="none"/></svg>Experience</div>
-          <div class="finder-tab" data-tab="contact"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="currentColor" stroke-width="1" fill="none"/><path d="M1.5 5l6.5 4 6.5-4" stroke="currentColor" stroke-width="1" fill="none"/></svg>Contact</div>
-          <div class="finder-tab" data-tab="faq"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/><text x="8" y="11.5" text-anchor="middle" font-size="10" font-weight="600" fill="currentColor">?</text></svg>FAQ</div>
-          <div class="finder-sidebar-label">Favorites</div>
-          <div class="finder-tab" data-tab="projects"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 4.5V12a1.5 1.5 0 001.5 1.5h10a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H8L6.5 3H3A1.5 1.5 0 001.5 4.5z" stroke="currentColor" stroke-width="1" fill="none"/></svg>Projects</div>
-          <div class="finder-sidebar-label tags-toggle" id="tags-toggle">Tags<svg class="tags-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3.5l3 3 3-3"/></svg></div>
-          <div class="tags-list collapsed" id="tags-list">
-            <div class="finder-tag-item" data-tag="fullstack"><span class="finder-tag-dot" style="background: #86d993;"></span>Full-Stack</div>
-            <div class="finder-tag-item" data-tag="ai"><span class="finder-tag-dot" style="background: #c9a0dc;"></span>AI</div>
-            <div class="finder-tag-item" data-tag="ui"><span class="finder-tag-dot" style="background: #f5c882;"></span>UI/UX</div>
-          </div>
-          <a href="resume.pdf" download class="finder-download-btn"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3-3m3 3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Download CV</a>
-        </div>
-        <div class="finder-main">
-          <div class="finder-main-title" id="finder-main-title">About Me</div>
-          <div class="finder-panel active" id="panel-about">
-            <div class="about-section">
-              <h2>Hi, I'm Judy</h2>
-              <p>Software developer passionate about building beautiful, functional web experiences.</p>
-              <div class="about-details">
-                <div class="about-row"><span class="about-label">Location</span><span>Seattle, WA</span></div>
-                <div class="about-row"><span class="about-label">Focus</span><span>Full-Stack Development</span></div>
-                <div class="about-row"><span class="about-label">Education</span><span>University of Washington<br>B.S. in Computer Science<br>Graduated on December 2025</span></div>
-                <div class="about-row"><span class="about-label">Languages</span><span>JavaScript, Python, Java</span></div>
-                <div class="about-row"><span class="about-label">Frameworks</span><span>React, Node.js, Express</span></div>
-                <div class="about-row"><span class="about-label">Tools</span><span>Git, Docker, AWS</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="finder-panel" id="panel-experience">
-            <div class="exp-timeline">
-              <div class="exp-item">
-                <div class="exp-dot"></div>
-                <div class="exp-content">
-                  <div class="exp-date">2023 — Present</div>
-                  <h3>Software Developer</h3>
-                  <p class="exp-company">Company Name</p>
-                  <p class="exp-desc">Brief description of your role and key achievements.</p>
-                </div>
-              </div>
-              <div class="exp-item">
-                <div class="exp-dot"></div>
-                <div class="exp-content">
-                  <div class="exp-date">2022 — 2023</div>
-                  <h3>Junior Developer</h3>
-                  <p class="exp-company">Another Company</p>
-                  <p class="exp-desc">Brief description of your role and key achievements.</p>
-                </div>
-              </div>
-              <div class="exp-item">
-                <div class="exp-dot"></div>
-                <div class="exp-content">
-                  <div class="exp-date">2021 — 2022</div>
-                  <h3>Intern</h3>
-                  <p class="exp-company">Startup Name</p>
-                  <p class="exp-desc">Brief description of your role and key achievements.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="finder-panel" id="panel-contact">
-            <div class="contact-grid">
-              <a href="mailto:judykangsh@gmail.com" class="contact-card">
-                <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-                <div class="contact-info">
-                  <div class="contact-label">Email</div>
-                  <div class="contact-value">judykangsh@gmail.com</div>
-                </div>
-                <button class="copy-btn" data-copy="judykangsh@gmail.com" title="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button>
-              </a>
-              <a href="https://github.com/judyks" target="_blank" class="contact-card">
-                <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div>
-                <div class="contact-info">
-                  <div class="contact-label">GitHub</div>
-                  <div class="contact-value">github.com/judyks</div>
-                </div>
-              </a>
-              <a href="https://linkedin.com/in/" target="_blank" class="contact-card">
-                <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
-                <div class="contact-info">
-                  <div class="contact-label">LinkedIn</div>
-                  <div class="contact-value">linkedin.com/in/judy</div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="finder-panel" id="panel-faq">
-            <div class="faq-section">
-              <div class="faq-item">
-                <div class="faq-q">Are you open to relocation?</div>
-                <div class="faq-a">Yes, I'm happy to relocate for the right opportunity.</div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Do you require visa sponsorship?</div>
-                <div class="faq-a">No, I do not require sponsorship now or in the future.</div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Are you open to in-person, hybrid, or remote work?</div>
-                <div class="faq-a">Yes, I'm comfortable with all work arrangements — in-person, hybrid, or fully remote.</div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Why this website?</div>
-                <div class="faq-a">LinkedIn felt too linear, and the most interesting things happen between the lines.</div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">How long did this take you?</div>
-                <div class="faq-a">Longer than I estimated. Shorter than it felt.</div>
-              </div>
-            </div>
-          </div>
-          <div class="finder-panel" id="panel-projects">
-            <div class="finder-view-toggle">
-              <button class="view-btn active" data-view="icons" title="Icon view"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="3" x2="14" y2="3"/><line x1="2" y1="8" x2="14" y2="8"/><line x1="2" y1="13" x2="14" y2="13"/></svg></button>
-              <button class="view-btn" data-view="cards" title="Card view"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="1.5" y="1.5" width="5" height="5" rx="1.2"/><rect x="9.5" y="1.5" width="5" height="5" rx="1.2"/><rect x="1.5" y="9.5" width="5" height="5" rx="1.2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1.2"/></svg></button>
-            </div>
-            <div class="finder-view finder-view-icons active">
-              <div class="finder-file-grid">
-                <div class="finder-file" data-tags="ui">
-                  <div class="finder-file-icon"><img src="https://picsum.photos/seed/proj1/400/500" alt="Redesign"></div>
-                  <div class="finder-file-label"><span>REDESIGN</span></div>
-                </div>
-                <div class="finder-file" data-tags="fullstack">
-                  <div class="finder-file-icon"><img src="https://picsum.photos/seed/proj2/400/300" alt="Weather Dashboard"></div>
-                  <div class="finder-file-label"><span>WEATHER DASHBOARD</span></div>
-                </div>
-                <div class="finder-file" data-tags="fullstack ai">
-                  <div class="finder-file-icon"><img src="https://picsum.photos/seed/proj3/400/500" alt="Social App"></div>
-                  <div class="finder-file-label"><span>SOCIAL APP</span></div>
-                </div>
-                <div class="finder-file" data-tags="ui">
-                  <div class="finder-file-icon"><img src="https://picsum.photos/seed/proj4/400/300" alt="Portfolio v1"></div>
-                  <div class="finder-file-label"><span>PORTFOLIO V1</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="finder-view finder-view-cards">
-              <div class="projects-grid">
-                <div class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/proj1/400/500" alt="Redesign"></div>
-                  <div class="project-info">
-                    <h3>Redesign</h3>
-                    <p>A brief description of this project and what it does.</p>
-                    <div class="project-tags"><span>React</span><span>Node.js</span></div>
-                  </div>
-                </div>
-                <div class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/proj2/400/300" alt="Weather Dashboard"></div>
-                  <div class="project-info">
-                    <h3>Weather Dashboard</h3>
-                    <p>A brief description of this project and what it does.</p>
-                    <div class="project-tags"><span>Python</span><span>SQL</span></div>
-                  </div>
-                </div>
-                <div class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/proj3/400/500" alt="Social App"></div>
-                  <div class="project-info">
-                    <h3>Social App</h3>
-                    <p>A brief description of this project and what it does.</p>
-                    <div class="project-tags"><span>Java</span><span>Spring</span></div>
-                  </div>
-                </div>
-                <div class="project-card">
-                  <div class="project-thumb"><img src="https://picsum.photos/seed/proj4/400/300" alt="Portfolio v1"></div>
-                  <div class="project-info">
-                    <h3>Portfolio v1</h3>
-                    <p>A brief description of this project and what it does.</p>
-                    <div class="project-tags"><span>JavaScript</span><span>CSS</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Projects Window -->
-    <div class="window light-window" id="window-projects" style="width: 580px; top: 60px; left: 200px;">
-      <div class="window-titlebar">
-        <div class="traffic-lights">
-          <div class="traffic-light close" onclick="closeWindow('projects')"></div>
-          <div class="traffic-light minimize" onclick="minimizeWindow(this.closest('.window').id.replace('window-',''))"></div>
-          <div class="traffic-light maximize" onclick="maximizeWindow('projects')"></div>
-        </div>
-        <div class="window-title">Projects</div>
-      </div>
-      <div class="window-body">
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/proj1/400/500" alt="E-Commerce Redesign"></div>
-            <div class="project-info">
-              <h3>Redesign</h3>
-              <p>A brief description of this project and what it does.</p>
-              <div class="project-tags">
-                <span>React</span>
-                <span>Node.js</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/proj2/400/300" alt="Weather Dashboard"></div>
-            <div class="project-info">
-              <h3>Weather Dashboard</h3>
-              <p>A brief description of this project and what it does.</p>
-              <div class="project-tags">
-                <span>Python</span>
-                <span>SQL</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/proj3/400/500" alt="Social App"></div>
-            <div class="project-info">
-              <h3>Social App</h3>
-              <p>A brief description of this project and what it does.</p>
-              <div class="project-tags">
-                <span>Java</span>
-                <span>Spring</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-thumb"><img src="https://picsum.photos/seed/proj4/400/300" alt="Portfolio v1"></div>
-            <div class="project-info">
-              <h3>Portfolio v1</h3>
-              <p>A brief description of this project and what it does.</p>
-              <div class="project-tags">
-                <span>JavaScript</span>
-                <span>CSS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gallery Window -->
-    <div class="window light-window gallery-window" id="window-gallery" style="width: 460px; top: 80px; left: 300px;">
-      <div class="window-titlebar">
-        <div class="traffic-lights">
-          <div class="traffic-light close" onclick="closeWindow('gallery')"></div>
-          <div class="traffic-light minimize" onclick="minimizeWindow(this.closest('.window').id.replace('window-',''))"></div>
-          <div class="traffic-light maximize" onclick="maximizeWindow('gallery')"></div>
-        </div>
-        <div class="window-title">Gallery</div>
-      </div>
-      <div class="window-body">
-        <div class="gallery-grid">
-          <div class="gallery-item" style="background: linear-gradient(135deg, #667eea, #764ba2);">&#127749;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #f093fb, #f5576c);">&#127796;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">&#127754;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">&#127795;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #fa709a, #fee140);">&#127773;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">&#127752;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #fccb90, #d57eeb);">&#127747;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #e0c3fc, #8ec5fc);">&#9968;</div>
-          <div class="gallery-item" style="background: linear-gradient(135deg, #f5576c, #ff6a00);">&#127748;</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mail Window -->
-    <div class="window mail-window" id="window-mail" style="width: 480px; top: 100px; left: 160px;">
-      <div class="window-titlebar">
-        <div class="traffic-lights">
-          <div class="traffic-light close" onclick="closeWindow('mail')"></div>
-          <div class="traffic-light minimize" onclick="minimizeWindow(this.closest('.window').id.replace('window-',''))"></div>
-          <div class="traffic-light maximize" onclick="maximizeWindow('mail')"></div>
-        </div>
-        <div class="window-title">Mail</div>
-      </div>
-      <div class="window-body">
-        <div class="mail-sidebar">
-          <div class="mail-sidebar-item active">New Message</div>
-          <div class="mail-sidebar-item">Inbox</div>
-          <div class="mail-sidebar-item">Sent</div>
-        </div>
-        <div class="mail-compose">
-          <div class="mail-field">
-            <label>To:</label>
-            <a href="mailto:judykangsh@gmail.com">judykangsh@gmail.com</a>
-          </div>
-          <div class="mail-field">
-            <label>From:</label>
-            <span>visitor@internet.com</span>
-          </div>
-          <div class="mail-field">
-            <label>Subject:</label>
-            <span>Let's work together!</span>
-          </div>
-          <div class="mail-body-text">
-            Thanks for stopping by my portfolio. Want to get in touch?<br><br>
-            Click the button below to send me an email directly.
-          </div>
-          <a href="mailto:judykangsh@gmail.com" class="mail-send-link">
-            <button class="mail-send-btn">&#9993; Send Email</button>
+    <section id="work" class="dash-work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Work</h2>
+      <ul class="project-grid">
+        <li>
+          <a class="project-tile" href="projects/redesign.html">
+            <img src="images/placeholder-redesign.svg" alt="Placeholder for Redesign" width="640" height="400">
+            <span>
+              <strong>Redesign</strong>
+              <em class="empty-slot">Write-up to be added.</em>
+            </span>
           </a>
-        </div>
-      </div>
-    </div>
+        </li>
+        <li>
+          <a class="project-tile" href="projects/weather-dashboard.html">
+            <img src="images/placeholder-weather.svg" alt="Placeholder for Weather Dashboard" width="640" height="400">
+            <span>
+              <strong>Weather Dashboard</strong>
+              <em class="empty-slot">Write-up to be added.</em>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="project-tile" href="projects/social-app.html">
+            <img src="images/placeholder-social.svg" alt="Placeholder for Social App" width="640" height="400">
+            <span>
+              <strong>Social App</strong>
+              <em class="empty-slot">Write-up to be added.</em>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="project-tile" href="projects/portfolio-v1.html">
+            <img src="images/placeholder-portfolio.svg" alt="Placeholder for Portfolio v1" width="640" height="400">
+            <span>
+              <strong>Portfolio v1</strong>
+              <em class="empty-slot">Write-up to be added.</em>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <!-- Trash Window -->
-    <div class="window light-window" id="window-trash" style="width: 350px; top: 140px; left: 400px;">
-      <div class="window-titlebar">
-        <div class="traffic-lights">
-          <div class="traffic-light close" onclick="closeWindow('trash')"></div>
-          <div class="traffic-light minimize" onclick="minimizeWindow(this.closest('.window').id.replace('window-',''))"></div>
-          <div class="traffic-light maximize" onclick="maximizeWindow('trash')"></div>
-        </div>
-        <div class="window-title">Trash</div>
-      </div>
-      <div class="window-body trash-body">
-        <div class="trash-file">
-          <div class="trash-thumb trash-thumb-txt">
-            <span>.txt</span>
-          </div>
-          <span class="trash-filename">it_works_on_my_machine.txt</span>
-        </div>
-        <div class="trash-file">
-          <div class="trash-thumb">
-            <img src="icons/bugs.jpg" alt="bugs">
-          </div>
-          <span class="trash-filename">bugs.jpg</span>
-        </div>
-      </div>
-    </div>
+    <section id="experience" class="dash-slot" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <ul class="experience-list">
+        <li>
+          <span class="experience-role">Software Engineer Intern</span>
+          <span class="experience-meta">Actual AI · Nov 2025–Aug 2026</span>
+        </li>
+        <li>
+          <span class="experience-role">Software Developer</span>
+          <span class="experience-meta">Associated Students of University of Washington (ASUW) · Sep 2024–Jun 2025</span>
+        </li>
+        <li>
+          <span class="experience-role">Software Engineering Intern</span>
+          <span class="experience-meta">Datafi · Jun 2024–Aug 2024</span>
+        </li>
+      </ul>
+    </section>
 
+    <section id="contact" class="dash-contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <a href="mailto:judykangsh@gmail.com">judykangsh@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05a9.2 9.2 0 015 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.28 10.28 0 0022 12.26C22 6.58 17.52 2 12 2z"/></svg>
+          </span>
+          <a href="https://github.com/judyks">github.com/judyks</a>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 112.5 6a2.5 2.5 0 012.48-2.5zM3 8.75h3.96V21H3zM9.25 8.75H13v1.67h.06c.52-.98 1.8-2.01 3.7-2.01 3.96 0 4.69 2.6 4.69 5.98V21H17.5v-5.45c0-1.3-.02-2.97-1.81-2.97-1.81 0-2.09 1.41-2.09 2.87V21H9.25z"/></svg>
+          </span>
+          <a href="https://www.linkedin.com/in/judy-kang/">linkedin.com/in/judy-kang</a>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 3.75h6.2L18 8.4V20.25H7A1.25 1.25 0 015.75 19V5A1.25 1.25 0 017 3.75z" stroke="currentColor" stroke-width="1.6"/><path d="M13 3.75V8.5h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <a href="resume.pdf">resume.pdf</a>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-    <!-- Project Items (scattered on desktop) -->
-    <div class="project-item" style="top: 25%; left: 2%;">
-      <img src="https://picsum.photos/seed/proj1/400/500" alt="E-Commerce Redesign">
-      <div class="project-label"><span>REDESIGN</span></div>
-    </div>
-
-    <div class="project-item" style="top: 5%; right: 3%; left: auto;">
-      <img src="https://picsum.photos/seed/proj2/400/300" alt="Weather Dashboard">
-      <div class="project-label"><span>WEATHER DASHBOARD</span></div>
-    </div>
-
-    <div class="project-item" style="bottom: 12%; left: 4%; top: auto;">
-      <img src="https://picsum.photos/seed/proj3/400/500" alt="Social App">
-      <div class="project-label"><span>SOCIAL APP</span></div>
-    </div>
-
-    <div class="project-item" style="bottom: 10%; right: 5%; top: auto; left: auto;">
-      <img src="https://picsum.photos/seed/proj4/400/300" alt="Portfolio v1">
-      <div class="project-label"><span>PORTFOLIO V1</span></div>
-    </div>
-
-  </div>
-
-  <!-- Dock -->
-  <div class="dock-container">
-    <div class="dock">
-      <div class="dock-item" id="dock-cv" onclick="openWindow('resume')">
-        <span class="dock-tooltip">CV</span>
-        <div class="dock-icon"><img src="icons/finder.png" alt="CV"></div>
-        <span class="dock-dot"></span>
-      </div>
-      <div class="dock-item" id="dock-gallery" onclick="openWindow('gallery')">
-        <span class="dock-tooltip">Gallery</span>
-        <div class="dock-icon"><img src="icons/photos.png" alt="Gallery"></div>
-        <span class="dock-dot"></span>
-      </div>
-      <div class="dock-item" id="dock-mail" onclick="openWindow('mail')">
-        <span class="dock-tooltip">Mail</span>
-        <div class="dock-icon"><img src="icons/mail.png" alt="Mail"></div>
-        <span class="dock-dot"></span>
-      </div>
-      <div class="dock-item" onclick="window.open('https://github.com/judyks', '_blank')">
-        <span class="dock-tooltip">GitHub</span>
-        <div class="dock-icon"><svg width="48" height="48" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="26" fill="#24292e"/><path d="M60 22C38.46 22 21 39.46 21 61c0 17.24 11.18 31.86 26.69 37.03 1.95.36 2.66-.85 2.66-1.88 0-.93-.03-4-.05-7.27-10.86 2.36-13.15-4.62-13.15-4.62-1.77-4.51-4.33-5.71-4.33-5.71-3.54-2.42.27-2.37.27-2.37 3.91.28 5.97 4.02 5.97 4.02 3.48 5.96 9.12 4.24 11.35 3.24.35-2.52 1.36-4.24 2.47-5.21-8.67-.99-17.78-4.34-17.78-19.31 0-4.27 1.52-7.76 4.02-10.5-.4-.99-1.74-4.97.38-10.35 0 0 3.28-1.05 10.74 4.01 3.11-.87 6.45-1.3 9.77-1.32 3.31.01 6.65.45 9.77 1.32 7.46-5.06 10.74-4.01 10.74-4.01 2.13 5.38.79 9.36.39 10.35 2.5 2.74 4.01 6.23 4.01 10.5 0 15.02-9.14 18.31-17.85 19.27 1.4 1.21 2.65 3.59 2.65 7.23 0 5.22-.05 9.43-.05 10.71 0 1.04.7 2.26 2.69 1.88C87.85 92.83 99 78.23 99 61 99 39.46 81.54 22 60 22z" fill="white"/></svg></div>
-      </div>
-      <div class="dock-item" onclick="window.open('https://linkedin.com/in/', '_blank')">
-        <span class="dock-tooltip">LinkedIn</span>
-        <div class="dock-icon"><svg width="48" height="48" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="26" fill="#0A66C2"/><path d="M35.5 51.5h10v32h-10v-32zm5-16a5.8 5.8 0 110 11.6 5.8 5.8 0 010-11.6zm14.5 16h9.6v4.4h.14c1.34-2.54 4.6-5.2 9.5-5.2 10.16 0 12.04 6.7 12.04 15.4v17.4h-10v-15.4c0-3.68-.06-8.4-5.12-8.4-5.12 0-5.9 4-5.9 8.14v15.66H55v-32z" fill="white"/></svg></div>
-      </div>
-      <div class="dock-separator"></div>
-      <div class="dock-item" id="dock-projects" onclick="openWindow('projects')">
-        <span class="dock-tooltip">Projects</span>
-        <div class="dock-icon"><img src="icons/folder.png" alt="Projects"></div>
-        <span class="dock-dot"></span>
-      </div>
-      <div class="dock-separator"></div>
-      <div class="dock-item" id="dock-trash" onclick="openWindow('trash')">
-        <span class="dock-tooltip">Trash</span>
-        <div class="dock-icon"><img src="icons/trash.png" alt="Trash"></div>
-        <span class="dock-dot"></span>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // ── Clock (menu bar removed) ──
-
-    // ── Window Management ──
-    let topZ = 200;
-
-    function openWindow(name) {
-      const win = document.getElementById('window-' + name);
-      const dockItem = document.getElementById('dock-' + name);
-      if (!win) return;
-      if (window.innerWidth <= 768) {
-        win.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        if (dockItem) dockItem.classList.add('open');
-        return;
-      }
-      win.classList.remove('minimized');
-      win.classList.add('visible');
-      bringToFront(win);
-      if (dockItem) dockItem.classList.add('open');
-    }
-
-    function closeWindow(name) {
-      const win = document.getElementById('window-' + name);
-      const dockItem = document.getElementById('dock-' + name);
-      win.classList.add('closing');
-      win.classList.remove('visible');
-      setTimeout(() => {
-        win.classList.remove('closing', 'maximized', 'minimized');
-        if (dockItem) dockItem.classList.remove('open');
-      }, 200);
-    }
-
-    function minimizeWindow(name) {
-      const win = document.getElementById('window-' + name);
-      win.classList.add('minimized');
-      win.classList.remove('visible');
-    }
-
-    function maximizeWindow(name) {
-      const win = document.getElementById('window-' + name);
-      if (win.classList.contains('maximized')) {
-        win.classList.remove('maximized');
-        win.style.top = win.dataset.origTop;
-        win.style.left = win.dataset.origLeft;
-        win.style.width = win.dataset.origWidth;
-        win.style.height = '';
-        win.style.translate = win.dataset.origTranslate || '';
-        win.setAttribute('data-x', win.dataset.origDataX || 0);
-        win.setAttribute('data-y', win.dataset.origDataY || 0);
-      } else {
-        win.dataset.origTop = win.style.top;
-        win.dataset.origLeft = win.style.left;
-        win.dataset.origWidth = win.style.width;
-        win.dataset.origTranslate = win.style.translate || '';
-        win.dataset.origDataX = win.getAttribute('data-x') || 0;
-        win.dataset.origDataY = win.getAttribute('data-y') || 0;
-        win.classList.add('maximized');
-        win.style.top = '20px';
-        win.style.left = '40px';
-        win.style.width = '80%';
-        win.style.height = '85%';
-        win.style.translate = 'none';
-        win.setAttribute('data-x', 0);
-        win.setAttribute('data-y', 0);
-      }
-      bringToFront(win);
-    }
-
-    function bringToFront(win) {
-      document.querySelectorAll('.window').forEach(w => w.classList.remove('active'));
-      topZ++;
-      win.style.zIndex = topZ;
-      win.classList.add('active');
-      // Menu bar removed
-    }
-
-    // Click window to bring to front
-    document.querySelectorAll('.window').forEach(win => {
-      win.addEventListener('mousedown', () => bringToFront(win));
-    });
-
-    // ── interact.js: Drag + Resize ── (desktop only)
-    if (window.innerWidth > 768) {
-    interact('.window')
-      .draggable({
-        allowFrom: '.window-titlebar, .sidebar-traffic-lights, .finder-main-title',
-        ignoreFrom: '.traffic-light',
-        inertia: true,
-        modifiers: [
-          interact.modifiers.restrictRect({ restriction: 'parent' })
-        ],
-        listeners: {
-          start(event) {
-            bringToFront(event.target);
-          },
-          move(event) {
-            const target = event.target;
-            const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
-            const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-            target.style.translate = x + 'px ' + y + 'px';
-            target.setAttribute('data-x', x);
-            target.setAttribute('data-y', y);
-          }
-        }
-      });
-    }
-
-    // ── Selectable Project Items ──
-    document.querySelectorAll('.project-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.stopPropagation();
-        document.querySelectorAll('.project-item').forEach(i => i.classList.remove('selected'));
-        item.classList.add('selected');
-      });
-    });
-    document.getElementById('desktop').addEventListener('click', (e) => {
-      if (e.target.id === 'desktop') {
-        document.querySelectorAll('.project-item').forEach(i => i.classList.remove('selected'));
-      }
-    });
-
-    // ── Draggable Project Items ── (desktop only)
-    if (window.innerWidth > 768) {
-    const widgetZone = { right: 400, bottom: 540 };
-    interact('.project-item')
-      .draggable({
-        inertia: true,
-        modifiers: [
-          interact.modifiers.restrictRect({ restriction: 'parent' })
-        ],
-        listeners: {
-          move(event) {
-            const target = event.target;
-            const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
-            const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-            target.style.translate = x + 'px ' + y + 'px';
-            target.setAttribute('data-x', x);
-            target.setAttribute('data-y', y);
-          },
-          end(event) {
-            const target = event.target;
-            const rect = target.getBoundingClientRect();
-            const desktop = document.getElementById('desktop').getBoundingClientRect();
-            const left = rect.left - desktop.left;
-            const top = rect.top - desktop.top;
-            if (left < widgetZone.right && top < widgetZone.bottom) {
-              let x = parseFloat(target.getAttribute('data-x')) || 0;
-              let y = parseFloat(target.getAttribute('data-y')) || 0;
-              const pushRight = widgetZone.right - left;
-              const pushDown = widgetZone.bottom - top;
-              if (pushRight < pushDown) {
-                x += pushRight + 10;
-              } else {
-                y += pushDown + 10;
-              }
-              target.style.translate = x + 'px ' + y + 'px';
-              target.style.transition = 'translate 0.25s ease';
-              target.setAttribute('data-x', x);
-              target.setAttribute('data-y', y);
-              setTimeout(() => target.style.transition = '', 300);
-            }
-          }
-        }
-      });
-    }
-
-    // ── Dock Bounce ──
-    document.querySelectorAll('.dock-item').forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.add('bouncing');
-        item.addEventListener('animationend', () => item.classList.remove('bouncing'), { once: true });
-      });
-    });
-
-    // ── Flip Clock ──
-    function updateFlipClock() {
-      var now = new Date();
-      var h = now.getHours();
-      var ampm = h >= 12 ? 'PM' : 'AM';
-      h = h % 12 || 12;
-      var hStr = String(h).padStart(2, '0');
-      var mStr = String(now.getMinutes()).padStart(2, '0');
-      var sStr = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById('flip-h1').textContent = hStr[0];
-      document.getElementById('flip-h2').textContent = hStr[1];
-      document.getElementById('flip-m1').textContent = mStr[0];
-      document.getElementById('flip-m2').textContent = mStr[1];
-      document.getElementById('flip-s1').textContent = sStr[0];
-      document.getElementById('flip-s2').textContent = sStr[1];
-      document.getElementById('flip-ampm').textContent = ampm;
-      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      document.getElementById('flip-date').textContent = months[now.getMonth()] + ' ' + now.getDate() + ' ' + now.getFullYear();
-      document.getElementById('flip-day').textContent = days[now.getDay()];
-    }
-    updateFlipClock();
-    setInterval(updateFlipClock, 1000);
-
-    // ── Date Widget ──
-    function updateDateWidget() {
-      var now = new Date();
-      var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      document.getElementById('widget-day').textContent = days[now.getDay()];
-      document.getElementById('widget-month').textContent = months[now.getMonth()];
-      document.getElementById('widget-num').textContent = now.getDate();
-    }
-    updateDateWidget();
-
-// ── Copy Buttons ──
-    document.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        navigator.clipboard.writeText(btn.dataset.copy);
-        btn.classList.add('copied');
-        btn.innerHTML = '<span class="copied-text">Copied!</span>';
-        setTimeout(() => {
-          btn.classList.remove('copied');
-          btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
-        }, 1500);
-      });
-    });
-
-// ── Finder Tabs ──
-    document.querySelectorAll('.finder-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const parent = tab.closest('.window');
-        parent.querySelectorAll('.finder-tab').forEach(t => t.classList.remove('active'));
-        parent.querySelectorAll('.finder-panel').forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        parent.querySelector('#panel-' + tab.dataset.tab).classList.add('active');
-        const mainTitle = document.getElementById('finder-main-title');
-        if (mainTitle) mainTitle.textContent = tab.childNodes[tab.childNodes.length - 1].textContent.trim();
-        // Reset tag filter when switching tabs
-        document.querySelectorAll('.finder-tag-item').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('#panel-projects .finder-file').forEach(f => f.classList.remove('hidden'));
-      });
-    });
-
-    // ── Sidebar Tag Filtering ──
-    document.querySelectorAll('.finder-tag-item').forEach(tag => {
-      tag.addEventListener('click', () => {
-        const isActive = tag.classList.contains('active');
-        document.querySelectorAll('.finder-tag-item').forEach(t => t.classList.remove('active'));
-
-        // Switch to projects panel
-        const win = tag.closest('.window');
-        win.querySelectorAll('.finder-tab').forEach(t => t.classList.remove('active'));
-        win.querySelectorAll('.finder-panel').forEach(p => p.classList.remove('active'));
-        win.querySelector('.finder-tab[data-tab="projects"]').classList.add('active');
-        win.querySelector('#panel-projects').classList.add('active');
-        document.getElementById('finder-main-title').textContent = 'Projects';
-
-        const files = document.querySelectorAll('#panel-projects .finder-file');
-        if (isActive) {
-          // Deselect — show all
-          files.forEach(f => f.classList.remove('hidden'));
-        } else {
-          tag.classList.add('active');
-          const selectedTag = tag.dataset.tag;
-          files.forEach(f => {
-            const fileTags = f.dataset.tags.split(' ');
-            f.classList.toggle('hidden', !fileTags.includes(selectedTag));
-          });
-        }
-      });
-    });
-
-    // ── Tags Dropdown ──
-    document.getElementById('tags-toggle').addEventListener('click', () => {
-      document.getElementById('tags-toggle').classList.toggle('open');
-      document.getElementById('tags-list').classList.toggle('collapsed');
-    });
-
-    // ── View Toggle ──
-    document.querySelectorAll('.view-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const panel = btn.closest('.finder-panel');
-        panel.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-        panel.querySelectorAll('.finder-view').forEach(v => v.classList.remove('active'));
-        btn.classList.add('active');
-        panel.querySelector('.finder-view-' + btn.dataset.view).classList.add('active');
-      });
-    });
-
-    // ── Clickable Finder Files ──
-    document.querySelectorAll('.finder-file').forEach(file => {
-      file.addEventListener('click', (e) => {
-        e.stopPropagation();
-        document.querySelectorAll('.finder-file').forEach(f => f.classList.remove('selected'));
-        file.classList.add('selected');
-      });
-      file.addEventListener('dblclick', () => {
-        openWindow('projects');
-      });
-    });
-
-    // ── Startup Cascade ──
-    setTimeout(() => {
-      if (window.innerWidth > 768) {
-        const win = document.getElementById('window-resume');
-        const desktop = document.getElementById('desktop');
-        win.style.left = Math.max(0, (desktop.offsetWidth - 780) / 2) + 'px';
-        win.style.top = Math.max(20, (desktop.offsetHeight - 600) / 2) + 'px';
-      }
-      openWindow('resume');
-    }, 100);
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
